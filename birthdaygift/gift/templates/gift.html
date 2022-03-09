@@ -6,6 +6,21 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		{% load static %}
+		<style>
+			.bg-image {
+			background-size: cover;
+			background-image: url("{% static 'pic.jpeg' %}");
+			width: 100vw;
+			height: 100vh;
+			background-repeat: no-repeat;
+			color: #e8a01a;
+
+			justify-content: center;
+			align-items: center;
+
+		}
+		</style>
     <title>Django Tailwind</title>
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +28,11 @@
 		{% tailwind_css %}
 	</head>
 
-	<body class="bg-gray-50 font-serif leading-normal tracking-normal">
+	<body class="bg-image font-serif leading-normal tracking-normal">
 		<div class="container mx-auto">
             <section class="flex items-center justify-center h-screen">
 
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/jDFLM6lTsl8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/7iEC4v3n8zo?rel=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </section>	
 		</div>
 	</body>
